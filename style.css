@@ -1,0 +1,425 @@
+:root {
+  --bg: #0c0c0c;
+  --card: #161616;
+  --blue: #00d4ff;
+  --text: #ffffff;
+  --dim: #a0a0a0;
+  --border: #2a2a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(12, 12, 12, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+.logo {
+  font-weight: 800;
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--dim);
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+/* HERO - İstədiyin Radial Gradiant Fon Bura Əlavə Edildi */
+.hero {
+  padding: 180px 8% 120px;
+  text-align: center;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 212, 255, 0.15) 0%,
+    rgba(12, 12, 12, 1) 70%
+  );
+}
+
+.user-badge-main {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--blue);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--blue);
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.active-users-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1e1e1e;
+  padding: 6px 15px;
+  border-radius: 50px;
+  width: fit-content;
+  margin: 0 auto 25px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.active-users-pill i {
+  color: #2ecc71;
+}
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+h1 span {
+  color: var(--blue);
+}
+.hero p {
+  color: var(--dim);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Accordion */
+.accordion-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.acc-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.acc-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.acc-header i:first-child {
+  color: var(--blue);
+  margin-right: 15px;
+}
+.acc-header span {
+  flex: 1;
+  font-weight: 600;
+}
+.arrow {
+  transition: 0.3s;
+  color: var(--dim);
+}
+.acc-content {
+  max-height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  color: var(--dim);
+}
+.acc-item.active .acc-content {
+  max-height: 150px;
+  padding: 15px 20px 20px 50px;
+}
+.acc-item.active .arrow {
+  transform: rotate(180deg);
+  color: var(--blue);
+}
+
+/* Testimonials & Grid */
+.section {
+  padding: 80px 8%;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+    
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.secondary-btn {
+  background: transparent;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.comment-form-container h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #080808;
+  padding: 60px 8% 20px;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: var(--blue);
+}
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+.socials a {
+  color: var(--dim);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Form */
+.comment-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #000;
+  border: 1px solid var(--border);
+  color: #fff;
+  border-radius: 5px;
+}
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--blue);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Haqqımızda bölməsinin ümumi qutusu */
+.about-box {
+    background: var(--card);
+    padding: 50px 40px;
+    border-radius: 20px;
+    text-align: center; /* Bütün daxili mətnləri ortalayır */
+    border: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto; /* Bölməni səhifənin mərkəzinə gətirir */
+}
+
+.about-box p {
+    margin-bottom: 30px;
+    color: var(--dim);
+    font-size: 1.1rem;
+}
+
+/* Statistika rəqəmlərini yan-yana gətirən hissə */
+.about-stats {
+    display: flex;
+    justify-content: center; /* Elementləri mərkəzdə cəmləyir */
+    align-items: center;
+    gap: 60px; /* Rəqəmlər arasındakı məsafə */
+    flex-wrap: wrap; /* Mobil versiyada alt-alta düşməsi üçün */
+}
+
+/* Hər bir statistika bloku (Məs: 5+ İl Təcrübə) */
+.stat {
+    display: flex;
+    flex-direction: column; /* Rəqəm üstdə, söz altdə olsun */
+    align-items: center;
+}
+
+.stat h3 {
+    color: var(--blue);
+    font-size: 2.5rem; /* Rəqəmi böyüdürük */
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0; /* Artıq marginləri silirik */
+}
+
+
+/* ============================================================
+   RESPONSİVLİK (MOBİL VƏ PLANŞET ÜÇÜN ƏLAVƏLƏR)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar mobil görünüşü */
+    .nav-links {
+        display: none; /* Mobil menyu düyməsi yoxdursa, linkləri gizlətmək daha səliqəlidir */
+    }
+    
+    /* Hero hissəsi */
+    .hero {
+        padding: 140px 5% 80px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Haqqımızda */
+    .about-box {
+        padding: 30px 20px;
+    }
+    .about-stats {
+        gap: 30px;
+    }
+    .stat h3 {
+        font-size: 2rem;
+    }
+
+    /* Xidmətlər (Accordion) */
+    .acc-item.active .acc-content {
+        padding: 15px 20px 20px 25px; /* Mobildə daxili boşluğu azaltdıq */
+    }
+    .acc-header span {
+        font-size: 0.95rem;
+    }
+
+    /* Testimonials Grid */
+    .grid {
+        grid-template-columns: 1fr; /* Mobildə rəylər bir sütun olsun */
+        gap: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 5% 20px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .socials {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .user-badge-main {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+    .active-users-pill {
+        font-size: 0.75rem;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .comment-form-container {
+        padding: 15px;
+    }
+}
+
+/* Mobil Menyu Düyməsi Stil */
+.menu-toggle {
+    display: none;
+    color: var(--blue);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Sırf mobildə görünsün */
+    }
+
+    .nav-links {
+        display: flex; /* Display block və ya none deyil, flex qalmalıdır */
+        flex-direction: column;
+        position: absolute;
+        top: -400px; /* Başlanğıcda yuxarıda gizlədilir */
+        left: 0;
+        width: 100%;
+        background: rgba(12, 12, 12, 0.98);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 0;
+        text-align: center;
+        transition: 0.4s ease-in-out; /* Açılış effekti */
+        z-index: 999;
+    }
+
+    /* Menyu aktiv olanda aşağı düşür */
+    .nav-links.active {
+        top: 70px; /* Navbarın hündürlüyünə uyğun aşağı düşür */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        margin-left: 0; /* Kompüter versiyasındakı margin-i sıfırlayırıq */
+    }
+}

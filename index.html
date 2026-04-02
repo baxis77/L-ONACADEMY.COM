@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LİONACADEMY.COM</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+    <div class="logo">LİON ACADEMY</div>
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#about">Haqqımızda</a></li>
+        <li><a href="#services">Xidmətlər</a></li>
+        <li><a href="#testimonials">Yorumlar</a></li>
+        <li><a href="#contact">Əlaqə</a></li>
+    </ul>
+</nav>
+
+    <header class="hero">
+      <div class="user-badge-main">
+        Artıq <span id="counter">875</span> nəfər bizimlə qazanır!
+      </div>
+      <div class="active-users-pill">
+        <i class="fas fa-user-check"></i>
+        <span>1,254 Aktiv İstifadəçi</span>
+      </div>
+      <h1>Gələcəyinizi <span>Rəqəmsal Dünyada</span> Qurun</h1>
+      <p>Maliyyə azadlığı üçün ən effektiv strategiyalar və real təcrübələr.</p>
+    </header>
+
+    <section id="about" class="section">
+      <h2 class="section-title">Haqqımızda</h2>
+      <div class="about-box">
+        <p>
+          Biz gənclərin onlayn dünyada stabil gəlir əldə etməsi üçün fəaliyyət
+          göstəririk. 5 ildən artıq təcrübəmizlə uğur yolunuzu qısaldırıq.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>5+</h3>
+            <p>İl Təcrübə</p>
+          </div>
+          <div class="stat">
+            <h3>100+</h3>
+            <p>Uğurlu Layihə</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2 class="section-title">Xidmətlərimiz</h2>
+      <p
+        class="hint"
+        style="text-align: center; color: var(--dim); margin-bottom: 20px"
+      >
+        Ətraflı məlumat üçün xidmətin üzərinə klikləyin
+      </p>
+      <div class="accordion-container">
+        <div class="acc-item">
+          <div class="acc-header">
+            <i class="fas fa-chart-line"></i>
+            <span>Kripto,Forex,Index</span>
+            <i class="fas fa-chevron-down arrow"></i>
+          </div>
+          <div class="acc-content">
+            <p>
+              "Qlobal maliyyə bazarlarında uğur qazanmaq təsadüf deyil, düzgün
+              analizin nəticəsidir. Biz sizə Kriptovalyuta (Bitcoin və
+              Altcoinlər), Forex (Valyuta cütlükləri) və Fond İndekslərində (S&P
+              500, Nasdaq) ticarət etməyin fundamentallarını öyrədirik.
+              Dərslərimizə texniki analiz, trendlərin izlənilməsi,
+              indikatorlarla iş və ən əsası - Psixoloji İdarəetmə daxildir.
+              Riskli zonalardan qaçaraq, stabil qazanc hədəfləyən strategiyaları
+              bizimlə kəşf edin."
+            </p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header">
+            <i class="fas fa-globe"></i>
+            <span>Freelance Master</span>
+            <i class="fas fa-chevron-down arrow"></i>
+          </div>
+          <div class="acc-content">
+            <p>
+              "Məkan və vaxt məhdudiyyəti olmadan çalışmaq istəyənlər üçün
+              nəzərdə tutulub. Upwork, Fiverr və Freelancer kimi dünyanın ən
+              böyük platformalarında rəqabətədavamlı profilin qurulması, xarici
+              müştərilərlə peşəkar kommunikasiya və işin düzgün
+              qiymətləndirilməsi yollarını öyrədirik. Dizayn, proqramlaşdırma,
+              data-entry və ya yazı bacarıqlarınızı qlobal bazarda yüksək
+              qiymətə satmağınız üçün sizə mentorluq edirik."
+            </p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header">
+            <i class="fas fa-store"></i>
+            <span>E-Ticarət</span>
+            <i class="fas fa-chevron-down arrow"></i>
+          </div>
+          <div class="acc-content">
+            <p>
+              "Onlayn satış dünyasına peşəkar giriş edin. Dropshipping
+              modellərindən tutmuş, şəxsi brendin yaradılmasına (Private Label)
+              qədər bütün mərhələləri əhatə edirik. Shopify mağazasının
+              qurulması, qalib məhsulların (winning products) tapılması,
+              Facebook və Instagram reklamları ilə hədəf kütləyə çatış və
+              logistikanın idarə olunması üzrə tam bələdçi təqdim edirik.
+              Sərhədləri aşaraq bütün dünyaya satış etməyə başlayın."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section dark-bg">
+      <h2 class="section-title">İstifadəçi Yorumları</h2>
+      <div class="grid" id="testimonialGrid"></div>
+      <div class="center">
+        <button id="nextBtn" class="secondary-btn">Daha çox göstər</button>
+      </div>
+      <div class="comment-form-container">
+        <h3>Fikirləriniz</h3>
+        <form id="commentForm">
+          <input type="text" id="userName" placeholder="Adınız" required />
+          <textarea
+            id="userComment"
+            rows="3"
+            placeholder="Fikriniz..."
+            required
+          ></textarea>
+          <button type="submit" class="submit-btn">Göndər</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="logo">LİON ACADEMY</h3>
+          <p>Gələcəyin maliyyə platforması.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Əlaqə</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Bakı, Azərbaycan</p>
+          <p>
+            <i class="fab fa-whatsapp"></i>
+            <a
+              href="https://wa.me/994500000000"
+              style="color: var(--dim); text-decoration: none"
+              >+994 50 000 00 00</a
+            >
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Bizi İzləyin</h4>
+          <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2023 LİONACADEMY. Bütün hüquqlar qorunur.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
