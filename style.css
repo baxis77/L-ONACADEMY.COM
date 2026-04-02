@@ -137,14 +137,16 @@ h1 span {
 }
 .acc-content {
   max-height: 0;
-  padding: 0 20px;
-  overflow: hidden;
-  transition: 0.3s ease-out;
-  color: var(--dim);
+    padding: 0 20px;
+    overflow: hidden;
+    transition: 0.4s ease-out; /* Açılış daha rəvan olsun */
+    color: var(--dim);
+    font-size: 0.95rem;
+    line-height: 1.6; /* Mətnin oxunaqlılığını artırır */
 }
 .acc-item.active .acc-content {
-  max-height: 150px;
-  padding: 15px 20px 20px 50px;
+  max-height: 500px; /* 150px yerinə 500px qoyuruq ki, bütün mətn sığsın */
+    padding: 15px 20px 20px 50px;
 }
 .acc-item.active .arrow {
   transform: rotate(180deg);
@@ -421,5 +423,18 @@ textarea {
     .nav-links li {
         margin: 15px 0;
         margin-left: 0; /* Kompüter versiyasındakı margin-i sıfırlayırıq */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .acc-item.active .acc-content {
+        max-height: 1000px; /* Mobildə sətirlər artdığı üçün limiti daha da böyüdürük */
+        padding: 15px 15px 20px 20px; /* Kənar boşluqları mobildə bir az azaldırıq */
+    }
+    
+    .acc-content p {
+        font-size: 0.9rem; /* Mobildə mətnin ölçüsünü bir az kiçildirik */
     }
 }
