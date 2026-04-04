@@ -75,7 +75,7 @@ function handleAuthentication(event) {
 
     setTimeout(() => {
         // Sənin əsas səhifənə (kursların olduğu index.html) yönləndirmə
-        window.location.href = "index.html"; 
+        window.location.href = "main.html"; 
     }, 1000);
 }
 
