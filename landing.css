@@ -32,6 +32,7 @@ body {
 }
 
 .logo {
+    color: var(--blue);
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -1px;
