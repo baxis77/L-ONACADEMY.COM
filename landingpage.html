@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion Academy | Montserrat Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LİON ACADEMY</div>
+        <div class="nav-auth">
+            <button class="login-link" onclick="openAuthModal('login')">Daxil ol</button>
+            <button class="register-btn" onclick="openAuthModal('register')">Qeydiyyatdan keç</button>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <div class="stat-badge">
+                875+ nəfər bizimlə qazanır!
+            </div>
+            
+            <h1>
+                Gələcəyinizi <span class="accent-text">Rəqəmsal Dünyada</span> Qurun
+            </h1>
+            
+            <p>Maliyyə azadlığı üçün ən effektiv strategiyalar və real təcrübələr.</p>
+            
+            <div class="cta-group">
+                <button class="main-cta-btn" onclick="openAuthModal('register')">İndi Başla</button>
+                <div class="active-status">
+                    <span class="active-dot"></span> 1,254 Aktiv İstifadəçi
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <h2 id="modalTitle">Qeydiyyat</h2>
+            <form id="authForm" onsubmit="handleAuthentication(event)">
+                <div id="nameInputGroup">
+                    <input type="text" id="authName" placeholder="Ad və Soyad">
+                </div>
+                <input type="email" id="authEmail" placeholder="E-poçt ünvanı" required>
+                <input type="password" id="authPass" placeholder="Şifrə" required>
+                <button type="submit" class="submit-auth-btn">Təsdiqlə</button>
+            </form>
+            <p class="modal-toggle-p">
+                <span id="toggleMessage">Hesabınız var?</span> 
+                <button onclick="toggleAuthMode()" id="toggleBtn">Daxil ol</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>
